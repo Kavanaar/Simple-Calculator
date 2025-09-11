@@ -1,8 +1,8 @@
-##Simple Calculator using Python
+## Simple Calculator using Python
 
-This is a menu-driven calculator made using Python.
+# This is a menu-driven calculator made using Python.
 
-What I learned
+What I learned :
 
 How to build a menu-driven program in Python.
 
