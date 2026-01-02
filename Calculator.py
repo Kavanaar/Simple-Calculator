@@ -1,57 +1,38 @@
-import sys
-
 class Calculator:
-    def __init__(self, a, b):
-        self.a = a
-        self.b = b
+    """
+    A simple calculator class that supports basic and advanced operations.
+    """
 
-    def addition(self):
-        print(f"Addition of given two numbers: {self.a + self.b}")
+    def add(self, a: float, b: float) -> float:
+        """Return sum of two numbers"""
+        return a + b
 
-    def subtraction(self):
-        print(f"Subtraction of given two numbers: {self.a - self.b}")
+    def subtract(self, a: float, b: float) -> float:
+        """Return difference of two numbers"""
+        return a - b
 
-    def multiplication(self):
-        print(f"Multiplication of given two numbers: {self.a * self.b}")  
+    def multiply(self, a: float, b: float) -> float:
+        """Return product of two numbers"""
+        return a * b
 
-    def division(self):
-        try:
-            print(f"division of given two numbers: {self.a / self.b}")
-        except ZeroDivisionError as e:
-            print(f"Can't divide by zero {e}")
+    def divide(self, a: float, b: float) -> float:
+        """Return division of two numbers"""
+        if b == 0:
+            raise ZeroDivisionError("Cannot divide by zero")
+        return a / b
 
+    def power(self, a: float, b: float) -> float:
+        """Return a raised to the power b"""
+        return a ** b
 
-while(True):
+    def modulus(self, a: float, b: float) -> float:
+        """Return modulus of two numbers"""
+        if b == 0:
+            raise ZeroDivisionError("Cannot perform modulus with zero")
+        return a % b
 
-    print("========Simple Calculator=========")
-    print("1. Addition \n2. Subtraction\n3. Multiplication\n4. Division\n5. Exit")
-
-    try:
-        choice = int(input("Enter your choice:"))
-    except ValueError as e:
-        print(f"Enter the valid number {e}")
-        continue
-
-    if 1<=choice<5:
-
-        try:
-            a = int(input("Enter the First number:"))
-            b = int(input("Enter the Second number:"))
-        except ValueError as e:
-            print(f"Enter the valid number {e}")
-            continue
-            
-        calculate = Calculator(a, b)
-        match choice:
-            case 1: 
-                calculate.addition()
-            case 2:
-                calculate.subtraction()
-            case 3:
-                calculate.multiplication()
-            case 4:
-                calculate.division()
-                
-    elif choice==5:
-        print("Exiting from Calculator")
-        sys.exit(0)
+    def square_root(self, a: float) -> float:
+        """Return square root of a number"""
+        if a < 0:
+            raise ValueError("Cannot calculate square root of negative number")
+        return a ** 0.5
