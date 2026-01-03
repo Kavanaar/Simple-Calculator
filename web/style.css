@@ -1,0 +1,99 @@
+body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f1f5f9;
+    font-family: Arial, sans-serif;
+    transition: background 0.3s;
+}
+
+.calculator {
+    background: white;
+    padding: 20px;
+    width: 260px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    transition: background 0.3s;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.dark-toggle {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 6px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#display {
+    width: 100%;
+    height: 45px;
+    font-size: 20px;
+    text-align: right;
+    margin-bottom: 10px;
+    padding-right: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+button {
+    height: 45px;
+    font-size: 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.1s, background 0.3s;
+}
+
+button:hover {
+    background: #e5e7eb;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.equal {
+    grid-column: span 4;
+    background: #2563eb;
+    color: white;
+}
+
+/* 🌙 Dark Mode */
+
+body.dark {
+    background: #0f172a;
+}
+
+body.dark .calculator {
+    background: #1e293b;
+    color: white;
+}
+
+body.dark button {
+    background: #334155;
+    color: white;
+}
+
+body.dark button:hover {
+    background: #475569;
+}
+
+body.dark #display {
+    background: #020617;
+    color: white;
+    border: 1px solid #475569;
+}
