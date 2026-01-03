@@ -1,11 +1,34 @@
-## Simple Calculator using Python
+# Simple Calculator
 
-# This is a menu-driven calculator made using Python.
+This project demonstrates a calculator implemented using multiple interfaces to showcase clean logic design, UI development, and project evolution.
 
-What I learned :
+## 🔹 Project Overview
 
-How to build a menu-driven program in Python.
+The calculator is implemented in two different ways:
 
-Basics of Object-Oriented Programming (OOP) using classes and methods.
+1. **Python CLI Calculator**
+2. **Web-based Calculator (HTML, CSS, JavaScript)**
 
-Exception handling (like dividing by zero or entering invalid input).
+The core idea remains the same, while the user interaction changes based on the interface.
+
+---
+
+## 🧠 Features
+
+### ✅ Python CLI Calculator
+- Object-Oriented design using a `Calculator` class
+- Menu-driven command-line interface
+- Robust input validation
+- Exception handling (division by zero, invalid input)
+- Calculation history support
+
+### ✅ Web Calculator
+- Interactive browser-based calculator
+- Built using HTML, CSS, and JavaScript
+- Manual calculation logic (no unsafe `eval()`)
+- Keyboard input support
+- Dark mode toggle
+- Button click animations
+- Clean and responsive UI
+
+---
